@@ -93,19 +93,48 @@ export default function Contact() {
       <div className="h-20" />
 
       {/* Hero Section */}
-      <section className="relative h-[45vh] min-h-[300px] flex items-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${HERO_IMAGE})` }}
-        />
-        <div className="absolute inset-0 page-header-overlay" />
-        <div className="container relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4">
-            Contact Us
-          </h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-            Get in touch with our engineering team
-          </p>
+      <section className="relative">
+        {/* Desktop: Use the image as an actual img element to preserve aspect ratio */}
+        <div className="hidden lg:block relative">
+          <img 
+            src={HERO_IMAGE} 
+            alt="Contact Background" 
+            className="w-full h-auto block"
+          />
+          {/* Content overlay positioned absolutely on top of image */}
+          <div className="absolute inset-0 page-header-overlay" />
+          <div className="absolute inset-0 flex items-center">
+            <div className="container text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4">
+                Contact Us
+              </h1>
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+                Get in touch with our engineering team
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        {/* Mobile/Tablet: Use background cover for taller section */}
+        <div 
+          className="lg:hidden relative min-h-[300px] sm:min-h-[350px] bg-cover bg-no-repeat"
+          style={{ 
+            backgroundImage: `url(${HERO_IMAGE})`,
+            backgroundPosition: 'center center',
+            backgroundSize: 'cover'
+          }}
+        >
+          <div className="absolute inset-0 page-header-overlay" />
+          <div className="absolute inset-0 flex items-center py-16">
+            <div className="container text-center">
+              <h1 className="text-3xl sm:text-4xl font-serif text-white mb-4">
+                Contact Us
+              </h1>
+              <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto">
+                Get in touch with our engineering team
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
