@@ -100,6 +100,7 @@ export default function Contact() {
             src={HERO_IMAGE} 
             alt="Contact Background" 
             className="w-full h-auto block"
+            style={{ maxHeight: '560px', objectFit: 'cover' }}
           />
           {/* Content overlay positioned absolutely on top of image */}
           <div className="absolute inset-0 page-header-overlay" />

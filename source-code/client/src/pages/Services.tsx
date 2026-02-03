@@ -144,6 +144,7 @@ export default function Services() {
             src={SERVICES_HERO} 
             alt="Services Background" 
             className="w-full h-auto block"
+            style={{ maxHeight: '560px', objectFit: 'cover' }}
           />
           {/* Content overlay positioned absolutely on top of image */}
           <div className="absolute inset-0 bg-slate-900/70" />

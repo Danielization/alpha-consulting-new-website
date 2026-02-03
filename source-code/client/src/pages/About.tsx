@@ -63,6 +63,7 @@ export default function About() {
             src={ABOUT_HERO} 
             alt="About Background" 
             className="w-full h-auto block"
+            style={{ maxHeight: '560px', objectFit: 'cover' }}
           />
           {/* Content overlay positioned absolutely on top of image */}
           <div className="absolute inset-0 page-header-overlay" />
