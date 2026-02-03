@@ -78,77 +78,34 @@ export default function Home() {
       {/* Spacer for fixed header */}
       <div className="h-20" />
       
-      {/* Hero Section - Image is 1904x560px, shows complete image */}
-      <section className="relative">
-        {/* Desktop: Use the image as an actual img element to preserve aspect ratio */}
-        <div className="hidden lg:block relative">
-          <img 
-            src={HERO_IMAGE} 
-            alt="Singapore Skyline" 
-            className="w-full h-auto block"
-          />
-          {/* Content overlay positioned absolutely on top of image */}
-          <div className="absolute inset-0 flex items-center">
-            <div className="container">
-              <div className="max-w-lg">
-                <h1 className="text-3xl xl:text-4xl font-serif text-white leading-tight mb-4">
-                  Engineering Excellence for Tomorrow's Skyline
-                </h1>
-                <p className="text-base xl:text-lg text-slate-200 mb-6 leading-relaxed">
-                  Leading mechanical and electrical consultancy since 1995. 
-                  Delivering innovative solutions across commercial, residential, 
-                  healthcare, and industrial sectors.
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  <Link href="/projects">
-                    <Button size="default" className="bg-primary hover:bg-primary/90 text-white font-medium text-sm">
-                      View Projects
-                    </Button>
-                  </Link>
-                  <Link href="/services">
-                    <Button size="default" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent text-sm">
-                      Our Services
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Mobile/Tablet: Use background cover for taller section */}
-        <div 
-          className="lg:hidden relative min-h-[350px] sm:min-h-[400px] bg-cover bg-no-repeat"
-          style={{ 
-            backgroundImage: `url(${HERO_IMAGE})`,
-            backgroundPosition: 'center center',
-            backgroundSize: 'cover'
-          }}
-        >
-          <div className="absolute inset-0 flex items-center py-16">
-            <div className="container">
-              <div className="max-w-xl">
-                <h1 className="text-2xl sm:text-3xl font-serif text-white leading-tight mb-4">
-                  Engineering Excellence for Tomorrow's Skyline
-                </h1>
-                <p className="text-sm sm:text-base text-slate-200 mb-6 leading-relaxed">
-                  Leading mechanical and electrical consultancy since 1995. 
-                  Delivering innovative solutions across commercial, residential, 
-                  healthcare, and industrial sectors.
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  <Link href="/projects">
-                    <Button size="default" className="bg-primary hover:bg-primary/90 text-white font-medium text-sm">
-                      View Projects
-                    </Button>
-                  </Link>
-                  <Link href="/services">
-                    <Button size="default" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent text-sm">
-                      Our Services
-                    </Button>
-                  </Link>
-                </div>
-              </div>
+      {/* Hero Section */}
+      <section className="relative h-[50vh] min-h-[400px] max-h-[600px] flex items-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${HERO_IMAGE})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/40" />
+        <div className="container relative z-10">
+          <div className="max-w-2xl">
+            <h1 className="text-3xl md:text-4xl xl:text-5xl font-serif text-white leading-tight mb-4">
+              Engineering Excellence for Tomorrow's Skyline
+            </h1>
+            <p className="text-base md:text-lg xl:text-xl text-slate-200 mb-6 leading-relaxed">
+              Leading mechanical and electrical consultancy since 1995. 
+              Delivering innovative solutions across commercial, residential, 
+              healthcare, and industrial sectors.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/projects">
+                <Button size="default" className="bg-primary hover:bg-primary/90 text-white font-medium text-sm md:text-base">
+                  View Projects
+                </Button>
+              </Link>
+              <Link href="/services">
+                <Button size="default" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent text-sm md:text-base">
+                  Our Services
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
