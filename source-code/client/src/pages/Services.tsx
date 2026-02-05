@@ -12,10 +12,15 @@ import {
   Radio,
   Cpu,
   Leaf,
-  ArrowRight
+  ArrowRight,
+  Lightbulb,
+  PenTool,
+  Hammer,
+  Wrench,
+  ChevronRight
 } from "lucide-react";
 
-const SERVICES_HERO = "https://private-us-east-1.manuscdn.com/sessionFile/iS0tuWCbowu9uVIvmwHdVa/sandbox/EcQqyD3FNxc2bvVO0zsKSi-img-3_1770087769000_na1fn_c2VydmljZXMtYmx1ZXByaW50LWJn.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvaVMwdHVXQ2Jvd3U5dVZJdm13SGRWYS9zYW5kYm94L0VjUXF5RDNGTnhjMmJ2Vk8wenNLU2ktaW1nLTNfMTc3MDA4Nzc2OTAwMF9uYTFmbl9jMlZ5ZG1salpYTXRZbXgxWlhCeWFXNTBMV0puLmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=acT1lxyYiCWTxOWTiKViWZCOnD0ZPOR1Rf4kCgddTD4R2ReDwBLH5EUTuqHrchrgwwANe~AifY30Q8E8oN51C2B5QtpzO4r6S0bpBztSrt3e5ycpzittZfBNrNwcW4iTF1R03qaPHLO2N-xVL7~JDiiAWQNutOTTu2L0yVxyu0Ln4xpN8DIk7yt72COQzcQEMSFrPLT9y0fNmIkDgQ0CtsvGEkHDZbdk18efyo94Ok2cM-DTs6Xsm9B7mZxTjqvgh5G0-CBDMZVbr-ivofB1a4rgQmCRvyYRDmeb3ey7avV3PEAJBhk9lOv5cefUPTrarc91ca8DsKnvLSOgHZEwWw__";
+const SERVICES_HERO = "/ServicesBanner1.png";
 
 const serviceCategories = [
   {
@@ -32,7 +37,7 @@ const serviceCategories = [
       "Boiler, steam and condensate services",
       "Swimming pool filtration plants",
     ],
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop",
+    image: "/Mechanical_Services.png",
   },
   {
     icon: Zap,
@@ -47,7 +52,7 @@ const serviceCategories = [
       "Cable management systems",
       "Lightning protection system",
     ],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+    image: "/Electrical2.png",
   },
   {
     icon: Flame,
@@ -62,7 +67,7 @@ const serviceCategories = [
       "Fire detection & alarm systems",
       "Portable fire extinguishers",
     ],
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=300&fit=crop",
+    image: "/FireSafety2.png",
   },
   {
     icon: Truck,
@@ -76,7 +81,7 @@ const serviceCategories = [
       "Automated document conveyance systems",
       "Cranes and hoists",
     ],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+    image: "/Travellator.png",
   },
   {
     icon: Cpu,
@@ -109,23 +114,59 @@ const serviceCategories = [
   },
 ];
 
-const scopeOfServices = [
-  "Technical advisory services",
-  "Economic and engineering feasibility studies",
-  "Value engineering",
-  "Planning and scheme design",
-  "Concept/Schematic, design development & drafting",
-  "Tender evaluation",
-  "Contract documentation",
-  "Contract administration & construction supervision",
-  "Project and construction management",
-  "Cost estimating, appraisal & control",
-  "Inspection & testing",
-  "Quality assurance",
-  "Engineering audit on design & installation",
-  "Energy audit",
-  "Energy conservation and management",
-  "Facility management",
+const projectPhases = [
+  {
+    phase: "Planning",
+    icon: Lightbulb,
+    color: "bg-blue-500",
+    borderColor: "border-blue-500",
+    bgLight: "bg-blue-50",
+    services: [
+      "Technical advisory services",
+      "Economic and engineering feasibility studies",
+      "Value engineering",
+      "Planning and scheme design",
+    ]
+  },
+  {
+    phase: "Design",
+    icon: PenTool,
+    color: "bg-purple-500",
+    borderColor: "border-purple-500",
+    bgLight: "bg-purple-50",
+    services: [
+      "Concept/Schematic, design development & drafting",
+      "Contract documentation",
+      "Cost estimating, appraisal & control",
+      "Engineering audit on design & installation",
+    ]
+  },
+  {
+    phase: "Construction",
+    icon: Hammer,
+    color: "bg-orange-500",
+    borderColor: "border-orange-500",
+    bgLight: "bg-orange-50",
+    services: [
+      "Tender evaluation",
+      "Contract administration & construction supervision",
+      "Project and construction management",
+      "Inspection & testing",
+      "Quality assurance",
+    ]
+  },
+  {
+    phase: "Operations",
+    icon: Wrench,
+    color: "bg-green-500",
+    borderColor: "border-green-500",
+    bgLight: "bg-green-50",
+    services: [
+      "Facility management",
+      "Energy audit",
+      "Energy conservation and management",
+    ]
+  },
 ];
 
 export default function Services() {
@@ -153,7 +194,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Scope of Services */}
+      {/* Scope of Services - Timeline */}
       <section className="section-padding bg-white">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-16">
@@ -166,16 +207,51 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {scopeOfServices.map((service, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 p-4 bg-muted rounded-lg hover:bg-primary/5 transition-colors"
-              >
-                <div className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                <span className="text-sm text-foreground">{service}</span>
-              </div>
-            ))}
+          {/* Timeline Container */}
+          <div className="relative">
+            {/* Connection Line - Hidden on mobile, shown on desktop */}
+            <div className="hidden lg:block absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 via-orange-500 to-green-500 z-0" style={{ top: '3rem' }} />
+            
+            {/* Phase Cards */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+              {projectPhases.map((phase, index) => (
+                <div key={index} className="group relative">
+                  {/* Phase Header */}
+                  <div className={`${phase.bgLight} rounded-t-xl p-6 border-t-4 ${phase.borderColor} transition-all duration-300 group-hover:shadow-lg`}>
+                    <div className="flex flex-col items-center text-center mb-4">
+                      <div className={`w-16 h-16 ${phase.color} rounded-full flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 shadow-lg`}>
+                        <phase.icon className="h-8 w-8 text-white" />
+                      </div>
+                      <h3 className="text-xl font-serif text-foreground mb-1">
+                        {phase.phase}
+                      </h3>
+                      <div className="text-xs text-muted-foreground font-medium">
+                        PHASE {index + 1}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Services List */}
+                  <div className="bg-white border border-t-0 rounded-b-xl p-6 transition-all duration-300 group-hover:shadow-lg min-h-[320px] flex flex-col">
+                    <ul className="space-y-3 flex-1">
+                      {phase.services.map((service, sIndex) => (
+                        <li key={sIndex} className="flex items-start gap-3 text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                          <ChevronRight className="h-4 w-4 mt-0.5 shrink-0 text-primary" />
+                          <span>{service}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom Info */}
+          <div className="mt-12 text-center">
+            <p className="text-sm text-muted-foreground">
+              Our comprehensive approach ensures seamless project delivery from start to finish
+            </p>
           </div>
         </div>
       </section>
@@ -213,11 +289,18 @@ export default function Services() {
                       ))}
                     </ul>
                   </div>
-                  <div className={`hidden lg:block ${index % 2 === 1 ? 'order-first' : ''}`}>
+                  <div className={`hidden lg:block p-6 ${index % 2 === 1 ? 'order-first' : ''}`}>
                     <img
                       src={category.image}
                       alt={category.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover rounded-xl"
+                      style={{ 
+                        objectPosition: category.title === 'Electrical Services' 
+                          ? '25% 50%'  // Electrical: show person
+                          : category.title === 'Transportation Services'
+                          ? '50% 50%'  // Transportation: center to show travellator
+                          : '0% 50%'   // Mechanical, Fire Protection, and others: far left
+                      }}
                     />
                   </div>
                 </div>

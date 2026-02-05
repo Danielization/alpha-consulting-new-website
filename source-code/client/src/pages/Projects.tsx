@@ -16,59 +16,141 @@ const categories = [
   "Industrial",
   "Infrastructure",
   "Institutional",
+  "Hotel & Leisure",
 ];
 
 const projects = [
+  // Ongoing Projects
   {
-    title: "Funan Redevelopment",
-    category: "Commercial",
+    title: "Bidadari C5",
+    category: "Residential",
     location: "Singapore",
-    client: "CapitaLand",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
-    award: "BCA Green Mark",
-  },
-  {
-    title: "SGH H9A Outram Medical Campus",
-    category: "Healthcare",
-    location: "Singapore",
-    client: "MOH Holdings",
-    image: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=600&h=400&fit=crop",
-  },
-  {
-    title: "Keppel & GE Towers",
-    category: "Commercial",
-    location: "Singapore",
-    client: "Keppel Land",
-    image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=600&h=400&fit=crop",
+    client: "Housing & Development Board",
+    developer: "Housing & Development Board",
+    status: "Ongoing",
+    badge: "Construction",
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop",
+    isOngoing: true,
   },
   {
     title: "Woodlands Integrated Healthcare Campus",
     category: "Healthcare",
     location: "Singapore",
-    client: "MOH Holdings",
+    client: "MOH Holdings Pte Ltd",
+    developer: "MOH Holdings Pte Ltd",
+    status: "Ongoing",
+    badge: "Post-construction",
     image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=400&fit=crop",
+    isOngoing: true,
+  },
+  {
+    title: "Nursing Home at Tampines St. 62",
+    category: "Healthcare",
+    location: "Singapore",
+    client: "MOH Holdings Pte Ltd",
+    developer: "MOH Holdings Pte Ltd",
+    status: "Ongoing",
+    badge: "Construction",
+    image: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=600&h=400&fit=crop",
+    isOngoing: true,
+  },
+  {
+    title: "Keppel & GE Towers",
+    category: "Commercial",
+    location: "Singapore",
+    client: "Keppel Land International Ltd",
+    developer: "Keppel Land International Ltd / Mansfield Developments Pte Ltd",
+    status: "Ongoing",
+    badge: "Construction",
+    image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=600&h=400&fit=crop",
+    isOngoing: true,
   },
   {
     title: "The Reef at King's Dock",
     category: "Residential",
     location: "Singapore",
     client: "Keppel Land",
+    developer: "Keppel Land (Singapore) Pte Ltd",
+    status: "Ongoing",
+    badge: "Construction",
     image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop",
     award: "BCA Green Mark Gold Plus",
+    isOngoing: true,
   },
+  // Completed Projects
   {
-    title: "Singapore Datacenter",
+    title: "Aircraft Hangars 4 & 5",
     category: "Industrial",
     location: "Singapore",
-    client: "NTT Facilities",
+    client: "SIA Engineering Pte Ltd",
+    developer: "SIA Engineering Pte Ltd",
+    status: "Completed",
+    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Singapore Marina Bayfront Bridge",
+    category: "Infrastructure",
+    location: "Singapore",
+    client: "Urban Redevelopment Authority",
+    developer: "Urban Redevelopment Authority",
+    status: "Completed",
+    image: "https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Singapore Flyer",
+    category: "Hotel & Leisure",
+    location: "Singapore",
+    client: "Singapore Flyer Pte Ltd",
+    developer: "Singapore Flyer Pte Ltd",
+    status: "Completed",
+    image: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=600&h=400&fit=crop",
+    award: "BCA Green Mark",
+  },
+  {
+    title: "NUS COM3",
+    category: "Institutional",
+    location: "Singapore",
+    client: "National University of Singapore",
+    developer: "National University of Singapore",
+    status: "Completed",
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Singapore Datacenter at Serangoon",
+    category: "Industrial",
+    location: "Singapore",
+    client: "NTT Facilities Inc.",
+    developer: "NTT Facilities Inc.",
+    status: "Completed",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
     award: "BCA Green Mark Platinum",
+  },
+  {
+    title: "Funan Redevelopment",
+    category: "Commercial",
+    location: "Singapore",
+    client: "CapitaLand",
+    developer: "CapitaLand Retail Project Management Pte Ltd",
+    status: "Completed",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
+    award: "BCA Green Mark",
+  },
+  {
+    title: "Nursing Home at Bukit Batok West",
+    category: "Institutional",
+    location: "Singapore",
+    client: "Ministry of Health",
+    developer: "Ministry of Health",
+    status: "Completed",
+    image: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=600&h=400&fit=crop",
   },
   {
     title: "Woods Square",
     category: "Commercial",
     location: "Singapore",
     client: "Woodlands Square Pte Ltd",
+    developer: "Woodlands Square Pte Ltd",
+    status: "Completed",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
     award: "BCA Green Mark Gold Plus",
   },
@@ -77,21 +159,18 @@ const projects = [
     category: "Residential",
     location: "Singapore",
     client: "Secure Venture Development",
+    developer: "Secure Venture Development",
+    status: "Completed",
     image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop",
     award: "BCA Green Mark Gold Plus",
-  },
-  {
-    title: "Singapore Marina Bayfront Bridge",
-    category: "Infrastructure",
-    location: "Singapore",
-    client: "Urban Redevelopment Authority",
-    image: "https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?w=600&h=400&fit=crop",
   },
   {
     title: "Orchardgateway",
     category: "Commercial",
     location: "Singapore",
     client: "UE Orchard Pte Ltd",
+    developer: "UE Orchard Pte Ltd",
+    status: "Completed",
     image: "https://images.unsplash.com/photo-1555636222-cae831e670b3?w=600&h=400&fit=crop",
     award: "BCA Green Mark Platinum",
   },
@@ -100,29 +179,18 @@ const projects = [
     category: "Residential",
     location: "Singapore",
     client: "Bishan Residential Development",
+    developer: "Bishan Residential Development Pte Ltd",
+    status: "Completed",
     image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&h=400&fit=crop",
     award: "BCA Green Mark Gold Plus",
-  },
-  {
-    title: "NUS COM4",
-    category: "Institutional",
-    location: "Singapore",
-    client: "National University of Singapore",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?w=600&h=400&fit=crop",
-  },
-  {
-    title: "Singapore Flyer",
-    category: "Infrastructure",
-    location: "Singapore",
-    client: "Singapore Flyer Pte Ltd",
-    image: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=600&h=400&fit=crop",
-    award: "BCA Green Mark",
   },
   {
     title: "Maybank Tower",
     category: "Commercial",
     location: "Singapore",
     client: "Malayan Banking Berhad",
+    developer: "Malayan Banking Berhad",
+    status: "Completed",
     image: "https://images.unsplash.com/photo-1554435493-93422e8220c8?w=600&h=400&fit=crop",
     award: "BCA Construction Excellence",
   },
@@ -131,8 +199,64 @@ const projects = [
     category: "Residential",
     location: "Singapore",
     client: "Rivershore Pte Ltd",
+    developer: "Rivershore Pte Ltd",
+    status: "Completed",
     image: "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?w=600&h=400&fit=crop",
     award: "BCA Green Mark",
+  },
+  {
+    title: "Nursing Home at Jurong West",
+    category: "Institutional",
+    location: "Singapore",
+    client: "Ministry of Health",
+    developer: "Ministry of Health",
+    status: "Completed",
+    image: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=600&h=400&fit=crop",
+  },
+  {
+    title: "LTA Circle Line",
+    category: "Infrastructure",
+    location: "Singapore",
+    client: "Land Transport Authority",
+    developer: "Land Transport Authority",
+    status: "Completed",
+    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop",
+  },
+  {
+    title: "National Cancer Centre",
+    category: "Institutional",
+    location: "Singapore",
+    client: "Singapore General Hospital",
+    developer: "Singapore General Hospital",
+    status: "Completed",
+    image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Shangri-La Hotel",
+    category: "Hotel & Leisure",
+    location: "Singapore",
+    client: "Shangri-La Hotel Ltd",
+    developer: "Shangri-La Hotel Ltd",
+    status: "Completed",
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Marina Mandarin Hotel",
+    category: "Hotel & Leisure",
+    location: "Singapore",
+    client: "Marina Mandarin Hotel",
+    developer: "Marina Mandarin Hotel",
+    status: "Completed",
+    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&h=400&fit=crop",
+  },
+  {
+    title: "Reflections at Keppel Bay",
+    category: "Residential",
+    location: "Singapore",
+    client: "Keppel Land International Ltd",
+    developer: "Keppel Land International Ltd",
+    status: "Completed",
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop",
   },
 ];
 
@@ -195,7 +319,7 @@ export default function Projects() {
             {filteredProjects.map((project, index) => (
               <Card
                 key={index}
-                className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300"
+                className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 p-0 h-full flex flex-col"
               >
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img
@@ -203,21 +327,34 @@ export default function Projects() {
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  {project.award && (
+                  {project.badge && (
+                    <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 text-xs px-3 py-1 rounded-full font-medium">
+                      {project.badge}
+                    </div>
+                  )}
+                  {project.award && project.badge && (
+                    <div className="absolute top-12 right-4 bg-primary text-white text-xs px-3 py-1 rounded-full">
+                      {project.award}
+                    </div>
+                  )}
+                  {project.award && !project.badge && (
                     <div className="absolute top-4 right-4 bg-primary text-white text-xs px-3 py-1 rounded-full">
                       {project.award}
                     </div>
                   )}
                 </div>
-                <CardContent className="p-5">
-                  <h3 className="font-serif text-lg text-foreground mb-2 group-hover:text-primary transition-colors">
+                <CardContent className="p-5 flex-1 flex flex-col">
+                  <h3 className="font-serif text-lg text-foreground mb-3 group-hover:text-primary transition-colors leading-tight min-h-[3.5rem] flex items-center">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-1">
-                    {project.category} • {project.location}
+                  <p className="text-muted-foreground text-sm mb-2 min-h-[2.5rem] flex items-start">
+                    {project.developer}
                   </p>
-                  <p className="text-muted-foreground text-xs">
-                    Client: {project.client}
+                  <p className="text-muted-foreground text-sm mb-2">
+                    Status: {project.status}
+                  </p>
+                  <p className="text-muted-foreground text-sm mt-auto">
+                    {project.category} • {project.location}
                   </p>
                 </CardContent>
               </Card>

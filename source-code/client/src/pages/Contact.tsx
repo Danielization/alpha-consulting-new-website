@@ -93,7 +93,7 @@ export default function Contact() {
       <div className="h-20" />
 
       {/* Hero Section */}
-      <section className="relative h-[45vh] min-h-[350px] max-h-[550px] flex items-center">
+      <section className="relative h-[50vh] min-h-[400px] max-h-[600px] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${HERO_IMAGE})` }}
