@@ -29,7 +29,7 @@ const projects = [
     developer: "Housing & Development Board",
     status: "Ongoing",
     badge: "Construction",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop",
+    image: "/images/Bidadari_C5.jpg",
     isOngoing: true,
   },
   {
@@ -62,7 +62,7 @@ const projects = [
     developer: "Keppel Land International Ltd / Mansfield Developments Pte Ltd",
     status: "Ongoing",
     badge: "Construction",
-    image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=600&h=400&fit=crop",
+    image: "/images/Keppel_GE_Towers.jpeg",
     isOngoing: true,
   },
   {
@@ -85,7 +85,7 @@ const projects = [
     client: "SIA Engineering Pte Ltd",
     developer: "SIA Engineering Pte Ltd",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop",
+    image: "/images/Aircraft_Hangars_4_5.jpeg",
   },
   {
     title: "Singapore Marina Bayfront Bridge",
@@ -132,7 +132,7 @@ const projects = [
     client: "CapitaLand",
     developer: "CapitaLand Retail Project Management Pte Ltd",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
+    image: "/images/Funan.jpg",
     award: "BCA Green Mark",
   },
   {
@@ -191,7 +191,8 @@ const projects = [
     client: "Malayan Banking Berhad",
     developer: "Malayan Banking Berhad",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1554435493-93422e8220c8?w=600&h=400&fit=crop",
+    image: "/images/Maybank_Tower.jpeg",
+    imagePosition: "top",
     award: "BCA Construction Excellence",
   },
   {
@@ -201,7 +202,7 @@ const projects = [
     client: "Rivershore Pte Ltd",
     developer: "Rivershore Pte Ltd",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1567496898669-ee935f5f647a?w=600&h=400&fit=crop",
+    image: "/images/Dakota_Residences.jpg",
     award: "BCA Green Mark",
   },
   {
@@ -220,7 +221,7 @@ const projects = [
     client: "Land Transport Authority",
     developer: "Land Transport Authority",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop",
+    image: "/images/LTA_Circle_Line.jpeg",
   },
   {
     title: "National Cancer Centre",
@@ -229,7 +230,7 @@ const projects = [
     client: "Singapore General Hospital",
     developer: "Singapore General Hospital",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&h=400&fit=crop",
+    image: "/images/National_Cancer_Centre.jpg",
   },
   {
     title: "Shangri-La Hotel",
@@ -247,7 +248,7 @@ const projects = [
     client: "Marina Mandarin Hotel",
     developer: "Marina Mandarin Hotel",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&h=400&fit=crop",
+    image: "/images/Marina_Mandarin_Hotel.jpg",
   },
   {
     title: "Reflections at Keppel Bay",
@@ -326,6 +327,7 @@ export default function Projects() {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    style={{ objectPosition: project.imagePosition || 'center' }}
                   />
                   {project.badge && (
                     <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 text-xs px-3 py-1 rounded-full font-medium">
