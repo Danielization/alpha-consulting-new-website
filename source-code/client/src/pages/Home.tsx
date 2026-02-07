@@ -57,7 +57,7 @@ const featuredProjects = [
     location: "Singapore",
     developer: "CapitaLand Integrated Commercial Trust",
     status: "Construction",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
+    image: "/images/AEI_Works_at_IMM_Building.jpg",
   },
   {
     title: "NEO Group HQ",
@@ -65,7 +65,7 @@ const featuredProjects = [
     location: "Singapore",
     developer: "Neo Garden Catering Pte Ltd",
     status: "Post-construction",
-    image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=600&h=400&fit=crop",
+    image: "/images/NEO_GROUP_HQ.jpg",
   },
   {
     title: "SGH H9A Outram Medical Campus",
@@ -73,7 +73,7 @@ const featuredProjects = [
     location: "Singapore",
     developer: "Ministry of Health",
     status: "Construction",
-    image: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=600&h=400&fit=crop",
+    image: "/images/SGH_H9A_Outram_Medical_Campus.jpg",
   },
   {
     title: "Mixed Development at 1 Sophia Road",
@@ -81,7 +81,7 @@ const featuredProjects = [
     location: "Singapore",
     developer: "CEL Development Pte Ltd",
     status: "Construction",
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&h=400&fit=crop",
+    image: "/images/Mixed_Development_at_1_Sophia_Road.png",
   },
 ];
 
@@ -189,7 +189,7 @@ export default function Home() {
                       src="/Mechanical_Services_2.png"
                       alt="Mechanical Services"
                       className="w-full h-full object-cover"
-                      style={{ objectPosition: '0% 50%' }}
+                      style={{ objectPosition: '50% 50%' }}
                     />
                   </div>
                 </div>

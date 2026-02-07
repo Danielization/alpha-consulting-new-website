@@ -40,7 +40,7 @@ const projects = [
     developer: "MOH Holdings Pte Ltd",
     status: "Ongoing",
     badge: "Post-construction",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&h=400&fit=crop",
+    image: "/images/Woodlands_Integrated_Healthcare_Campus.jpg",
     isOngoing: true,
   },
   {
@@ -51,7 +51,7 @@ const projects = [
     developer: "MOH Holdings Pte Ltd",
     status: "Ongoing",
     badge: "Construction",
-    image: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=600&h=400&fit=crop",
+    image: "/images/Nursing_Home_at_Tampines_Street_62.jpeg",
     isOngoing: true,
   },
   {
@@ -73,7 +73,7 @@ const projects = [
     developer: "Keppel Land (Singapore) Pte Ltd",
     status: "Ongoing",
     badge: "Construction",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop",
+    image: "/images/The_Reef_at_Kings_Dock.jpeg",
     award: "BCA Green Mark Gold Plus",
     isOngoing: true,
   },
@@ -94,7 +94,7 @@ const projects = [
     client: "Urban Redevelopment Authority",
     developer: "Urban Redevelopment Authority",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1514214246283-d427a95c5d2f?w=600&h=400&fit=crop",
+    image: "/images/Singapore_Marina_Bayfront_Bridge.png",
   },
   {
     title: "Singapore Flyer",
@@ -103,7 +103,7 @@ const projects = [
     client: "Singapore Flyer Pte Ltd",
     developer: "Singapore Flyer Pte Ltd",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1565967511849-76a60a516170?w=600&h=400&fit=crop",
+    image: "/images/Singapore_Flyer.jpg",
     award: "BCA Green Mark",
   },
   {
@@ -113,7 +113,7 @@ const projects = [
     client: "National University of Singapore",
     developer: "National University of Singapore",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?w=600&h=400&fit=crop",
+    image: "/images/NUS_COM3.jpg",
   },
   {
     title: "Singapore Datacenter at Serangoon",
@@ -122,7 +122,7 @@ const projects = [
     client: "NTT Facilities Inc.",
     developer: "NTT Facilities Inc.",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
+    image: "/images/Singapore_Datacenter_at_Serangoon.jpg",
     award: "BCA Green Mark Platinum",
   },
   {
@@ -132,7 +132,7 @@ const projects = [
     client: "CapitaLand",
     developer: "CapitaLand Retail Project Management Pte Ltd",
     status: "Completed",
-    image: "/images/Funan.jpg",
+    image: "/images/Funan_Redevelopment.png",
     award: "BCA Green Mark",
   },
   {
@@ -142,7 +142,7 @@ const projects = [
     client: "Ministry of Health",
     developer: "Ministry of Health",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=600&h=400&fit=crop",
+    image: "/images/Nursing_Home_at_Bukit_Batok_West.jpeg",
   },
   {
     title: "Woods Square",
@@ -151,7 +151,7 @@ const projects = [
     client: "Woodlands Square Pte Ltd",
     developer: "Woodlands Square Pte Ltd",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
+    image: "/images/Woods_Square.jpg",
     award: "BCA Green Mark Gold Plus",
   },
   {
@@ -161,7 +161,7 @@ const projects = [
     client: "Secure Venture Development",
     developer: "Secure Venture Development",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop",
+    image: "/images/Principal_Garden.png",
     award: "BCA Green Mark Gold Plus",
   },
   {
@@ -171,7 +171,7 @@ const projects = [
     client: "UE Orchard Pte Ltd",
     developer: "UE Orchard Pte Ltd",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1555636222-cae831e670b3?w=600&h=400&fit=crop",
+    image: "/images/Orchardgateway.png",
     award: "BCA Green Mark Platinum",
   },
   {
@@ -181,7 +181,7 @@ const projects = [
     client: "Bishan Residential Development",
     developer: "Bishan Residential Development Pte Ltd",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&h=400&fit=crop",
+    image: "/images/Sky_Habitat.jpeg",
     award: "BCA Green Mark Gold Plus",
   },
   {
@@ -202,7 +202,7 @@ const projects = [
     client: "Rivershore Pte Ltd",
     developer: "Rivershore Pte Ltd",
     status: "Completed",
-    image: "/images/Dakota_Residences.jpg",
+    image: "/images/Dakota_Residences.png",
     award: "BCA Green Mark",
   },
   {
@@ -212,7 +212,7 @@ const projects = [
     client: "Ministry of Health",
     developer: "Ministry of Health",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=600&h=400&fit=crop",
+    image: "/images/Nursing_Home_at_Jurong_West.jpg",
   },
   {
     title: "LTA Circle Line",
@@ -230,7 +230,7 @@ const projects = [
     client: "Singapore General Hospital",
     developer: "Singapore General Hospital",
     status: "Completed",
-    image: "/images/National_Cancer_Centre.jpg",
+    image: "/images/National_Cancer_Centre.png",
   },
   {
     title: "Shangri-La Hotel",
@@ -239,7 +239,7 @@ const projects = [
     client: "Shangri-La Hotel Ltd",
     developer: "Shangri-La Hotel Ltd",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop",
+    image: "/images/Shangri-LaHotel.jpeg",
   },
   {
     title: "Marina Mandarin Hotel",
@@ -257,7 +257,7 @@ const projects = [
     client: "Keppel Land International Ltd",
     developer: "Keppel Land International Ltd",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&h=400&fit=crop",
+    image: "/images/Reflections_at_Keppel_Bay.png",
   },
 ];
 
