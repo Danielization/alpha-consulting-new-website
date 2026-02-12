@@ -371,35 +371,66 @@ export default function Projects() {
         </div>
 
         {/* Full Profile Download Section */}
-        <div className="mt-16 py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
-          <div className="text-center">
-            <h3 className="text-2xl md:text-3xl font-serif text-foreground mb-4">
-              View Our Complete Portfolio
+        <div className="mt-16 mb-8">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
+              Download Our Full Profile
             </h3>
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Download our comprehensive company profile to explore our complete project portfolio, 
+            <div className="flex justify-center mb-6">
+              <div className="w-16 h-1 bg-orange-500"></div>
+            </div>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Access our comprehensive company profile to explore our complete project portfolio, 
               technical expertise, and detailed case studies.
             </p>
-            <a
-              href="/AlphaConsultingEngineersFullProfile.pdf"
-              download="AlphaConsultingEngineersFullProfile.pdf"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+          </div>
+          
+          <div className="flex justify-center">
+            <div className="bg-white border border-gray-200 rounded-lg p-8 w-full max-w-md shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <svg
+                      className="w-6 h-6 text-orange-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" />
+                    </svg>
+                  </div>
+                  <div className="text-left">
+                    <h4 className="text-lg font-serif font-bold text-foreground">
+                      Company Profile
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              
+              <p className="text-sm text-muted-foreground mb-6">
+                Comprehensive overview of our services, expertise, and project portfolio with detailed case studies and technical specifications.
+              </p>
+              
+              <a
+                href="/AlphaConsultingEngineersFullProfile.pdf"
+                download="AlphaConsultingEngineersFullProfile.pdf"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-orange-500 text-white font-semibold rounded hover:bg-orange-600 transition-colors"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8m0 8l-4-2m4 2l4-2"
-                />
-              </svg>
-              Download Full Company Profile (PDF)
-            </a>
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                  />
+                </svg>
+                DOWNLOAD PROFILE
+              </a>
+            </div>
           </div>
         </div>
       </section>
