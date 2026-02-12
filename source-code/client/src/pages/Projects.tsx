@@ -369,6 +369,39 @@ export default function Projects() {
             </div>
           )}
         </div>
+
+        {/* Full Profile Download Section */}
+        <div className="mt-16 py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
+          <div className="text-center">
+            <h3 className="text-2xl md:text-3xl font-serif text-foreground mb-4">
+              View Our Complete Portfolio
+            </h3>
+            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Download our comprehensive company profile to explore our complete project portfolio, 
+              technical expertise, and detailed case studies.
+            </p>
+            <a
+              href="/AlphaConsultingEngineersFullProfile.pdf"
+              download="AlphaConsultingEngineersFullProfile.pdf"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8m0 8l-4-2m4 2l4-2"
+                />
+              </svg>
+              Download Full Company Profile (PDF)
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* Awards Section */}
