@@ -77,26 +77,26 @@ export default function About() {
       <section className="section-padding bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <ScrollReveal direction="left">
+            <ScrollReveal direction="left" className="order-2 lg:order-1">
               <div>
                 <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-6">
                   The Practice
                 </h2>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-6 leading-relaxed text-justify">
                   Alpha Consulting Engineers Pte Ltd was established in January 1995 
                   in conjunction with Alpha Engineering Consultant to assist in undertaking 
                   a whole spectrum of mechanical and electrical engineering consultancy 
                   services pertaining to building construction and other industries in 
                   Singapore and the region.
                 </p>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground mb-6 leading-relaxed text-justify">
                   Together with Alpha Engineering Consultant, Alpha Consulting Engineers 
                   Pte Ltd (ACEPL) has since 1995 completed numerous projects, ranging from 
                   condominiums, teaching institutions, hospitals, hotels, office buildings, 
                   shopping malls to aircraft hangars, wafer fabrication plants etc. in 
                   Singapore, Indonesia, Myanmar, Vietnam, Thailand and China.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-justify">
                   ACEPL is committed to providing high quality services to our clients. 
                   No effort will be spared in producing economical, practical and reliable 
                   electrical and mechanical design, in sympathy with the building architecture 
@@ -104,7 +104,7 @@ export default function About() {
                 </p>
               </div>
             </ScrollReveal>
-            <ScrollReveal direction="right" delay={0.2}>
+            <ScrollReveal direction="right" delay={0.2} className="order-1 lg:order-2">
               <div>
                 <img
                   src={TEAM_IMAGE}
@@ -134,8 +134,8 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <ScrollReveal key={index} delay={index * 0.15} fullWidth>
-                <Card className="text-center border-none shadow-lg">
-                  <CardContent className="p-8">
+                <Card className="text-center border-none shadow-lg h-full">
+                  <CardContent className="p-8 h-full flex flex-col">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
                       <value.icon className="h-8 w-8 text-primary" />
                     </div>
@@ -167,9 +167,9 @@ export default function About() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {teamStats.map((stat, index) => (
               <ScrollReveal key={index} delay={index * 0.1} direction="none" fullWidth>
-                <div className="text-center p-6 bg-muted rounded-lg">
+                <div className="text-center p-6 bg-muted rounded-lg h-full flex flex-col justify-between min-h-[140px]">
                   <div className="text-4xl font-serif text-primary mb-2">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div className="text-sm text-muted-foreground leading-tight min-h-[2.5rem] flex items-center justify-center">{stat.label}</div>
                 </div>
               </ScrollReveal>
             ))}

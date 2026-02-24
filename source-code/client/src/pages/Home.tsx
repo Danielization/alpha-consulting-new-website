@@ -173,7 +173,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Mechanical Services */}
                 <ScrollReveal delay={0.1} fullWidth>
-                  <Card className="overflow-hidden border-border py-0 min-h-[240px]">
+                  <Card className="overflow-hidden border-border py-0 min-h-[240px] h-full">
                     <div className="grid md:grid-cols-5 h-full">
                       <div className="md:col-span-3 p-6 flex flex-col justify-center">
                         <div className="flex items-center gap-3 mb-4">
@@ -205,7 +205,7 @@ export default function Home() {
 
                 {/* Electrical Services */}
                 <ScrollReveal delay={0.2} fullWidth>
-                  <Card className="overflow-hidden border-border py-0 min-h-[240px]">
+                  <Card className="overflow-hidden border-border py-0 min-h-[240px] h-full">
                     <div className="grid md:grid-cols-5 h-full">
                       <div className="md:col-span-3 p-6 flex flex-col justify-center">
                         <div className="flex items-center gap-3 mb-4">
@@ -237,7 +237,7 @@ export default function Home() {
 
                 {/* Fire Protection Services */}
                 <ScrollReveal delay={0.3} fullWidth>
-                  <Card className="overflow-hidden border-border py-0 min-h-[240px]">
+                  <Card className="overflow-hidden border-border py-0 min-h-[240px] h-full">
                     <div className="grid md:grid-cols-5 h-full">
                       <div className="md:col-span-3 p-6 flex flex-col justify-center">
                         <div className="flex items-center gap-3 mb-4">
@@ -268,7 +268,7 @@ export default function Home() {
 
                 {/* Transportation Services */}
                 <ScrollReveal delay={0.4} fullWidth>
-                  <Card className="overflow-hidden border-border py-0 min-h-[240px]">
+                  <Card className="overflow-hidden border-border py-0 min-h-[240px] h-full">
                     <div className="grid md:grid-cols-5 h-full">
                       <div className="md:col-span-3 p-6 flex flex-col justify-center">
                         <div className="flex items-center gap-3 mb-4">

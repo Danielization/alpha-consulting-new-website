@@ -462,7 +462,7 @@ export default function Projects() {
               { count: "5+", label: "Best Buildable Design Awards" },
             ].map((award, index) => (
               <ScrollReveal key={index} delay={index * 0.1} direction="none" fullWidth>
-                <div className="text-center p-6 bg-muted rounded-lg">
+                <div className="text-center p-6 bg-muted rounded-lg h-full flex flex-col justify-center">
                   <div className="text-3xl font-serif text-primary mb-2">{award.count}</div>
                   <div className="text-sm text-muted-foreground">{award.label}</div>
                 </div>

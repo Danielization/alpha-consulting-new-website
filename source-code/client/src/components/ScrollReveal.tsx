@@ -55,8 +55,8 @@ export default function ScrollReveal({
         delay,
         ease: [0.25, 0.4, 0.25, 1], // Smooth easing curve
       }}
-      className={fullWidth ? className : `${className}`}
-      style={fullWidth ? { width: "100%" } : {}}
+      className={className}
+      style={fullWidth ? { width: "100%", height: "100%" } : { height: "100%" }}
     >
       {children}
     </motion.div>
