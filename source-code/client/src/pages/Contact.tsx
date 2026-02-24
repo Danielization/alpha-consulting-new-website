@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 import { toast } from "sonner";
 import { 
   MapPin, 
@@ -114,43 +115,48 @@ export default function Contact() {
         <div className="container">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Contact Information */}
-            <div className="lg:col-span-1">
-              <h2 className="text-2xl font-serif text-foreground mb-6">
-                Get in Touch
-              </h2>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                Have a project in mind or need engineering consultation? 
-                We'd love to hear from you. Reach out to us through any 
-                of the following channels.
-              </p>
+            <ScrollReveal direction="left">
+              <div className="lg:col-span-1">
+                <h2 className="text-2xl font-serif text-foreground mb-6">
+                  Get in Touch
+                </h2>
+                <p className="text-muted-foreground mb-8 leading-relaxed">
+                  Have a project in mind or need engineering consultation? 
+                  We'd love to hear from you. Reach out to us through any 
+                  of the following channels.
+                </p>
 
-              <div className="space-y-6">
-                {contactInfo.map((item, index) => (
-                  <div key={index} className="flex gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                      <item.icon className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-foreground mb-1">{item.title}</h3>
-                      {item.link ? (
-                        <a
-                          href={item.link}
-                          className="text-muted-foreground hover:text-primary transition-colors whitespace-pre-line"
-                        >
-                          {item.content}
-                        </a>
-                      ) : (
-                        <p className="text-muted-foreground whitespace-pre-line">{item.content}</p>
-                      )}
-                    </div>
-                  </div>
-                ))}
+                <div className="space-y-6">
+                  {contactInfo.map((item, index) => (
+                    <ScrollReveal key={index} delay={index * 0.1} direction="none">
+                      <div className="flex gap-4">
+                        <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                          <item.icon className="h-5 w-5 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="font-medium text-foreground mb-1">{item.title}</h3>
+                          {item.link ? (
+                            <a
+                              href={item.link}
+                              className="text-muted-foreground hover:text-primary transition-colors whitespace-pre-line"
+                            >
+                              {item.content}
+                            </a>
+                          ) : (
+                            <p className="text-muted-foreground whitespace-pre-line">{item.content}</p>
+                          )}
+                        </div>
+                      </div>
+                    </ScrollReveal>
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <Card className="border-none shadow-lg">
+            <ScrollReveal direction="right" delay={0.2} className="lg:col-span-2">
+              <div>
+                <Card className="border-none shadow-lg">
                 <CardContent className="p-8">
                   <h2 className="text-2xl font-serif text-foreground mb-6">
                     Send Us a Message
@@ -263,7 +269,8 @@ export default function Contact() {
                   )}
                 </CardContent>
               </Card>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>

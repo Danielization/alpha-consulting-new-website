@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 import { 
   Settings, 
   Zap, 
@@ -197,15 +198,17 @@ export default function Services() {
       {/* Scope of Services - Timeline */}
       <section className="section-padding bg-white">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-6">
-              Scope of Services
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              We provide end-to-end engineering consultancy services, from initial 
-              concept through to project completion and facility management.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-6">
+                Scope of Services
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                We provide end-to-end engineering consultancy services, from initial 
+                concept through to project completion and facility management.
+              </p>
+            </div>
+          </ScrollReveal>
 
           {/* Timeline Container */}
           <div className="relative">
@@ -215,7 +218,8 @@ export default function Services() {
             {/* Phase Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               {projectPhases.map((phase, index) => (
-                <div key={index} className="group relative">
+                <ScrollReveal key={index} delay={index * 0.15} fullWidth>
+                  <div className="group relative">
                   {/* Phase Header */}
                   <div className={`${phase.bgLight} rounded-t-xl p-6 border-t-4 ${phase.borderColor} transition-all duration-300 group-hover:shadow-lg`}>
                     <div className="flex flex-col items-center text-center mb-4">
@@ -242,7 +246,8 @@ export default function Services() {
                       ))}
                     </ul>
                   </div>
-                </div>
+                  </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -259,19 +264,22 @@ export default function Services() {
       {/* Service Categories */}
       <section className="section-padding bg-muted">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
-              Field of Specialization
-            </h2>
-            <p className="text-muted-foreground">
-              Our expertise spans across all major disciplines of mechanical and 
-              electrical engineering for building services.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
+                Field of Specialization
+              </h2>
+              <p className="text-muted-foreground">
+                Our expertise spans across all major disciplines of mechanical and 
+                electrical engineering for building services.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="space-y-8">
             {serviceCategories.map((category, index) => (
-              <Card key={index} className="overflow-hidden border-none shadow-lg">
+              <ScrollReveal key={index} delay={index * 0.1} fullWidth>
+                <Card className="overflow-hidden border-none shadow-lg">
                 <div className={`grid lg:grid-cols-3 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                   <div className="lg:col-span-2 p-8 lg:p-12">
                     <div className="flex items-center gap-4 mb-6">
@@ -304,7 +312,8 @@ export default function Services() {
                     />
                   </div>
                 </div>
-              </Card>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -314,7 +323,8 @@ export default function Services() {
       <section className="section-padding bg-primary">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <ScrollReveal direction="left">
+              <div>
               <div className="flex items-center gap-3 mb-6">
                 <Leaf className="h-8 w-8 text-white" />
                 <h2 className="text-3xl md:text-4xl font-serif text-white">
@@ -340,8 +350,10 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
+              </div>
+            </ScrollReveal>
+            <ScrollReveal direction="right" delay={0.2}>
+              <div className="grid grid-cols-2 gap-4">
               <div className="bg-white/10 backdrop-blur rounded-lg p-6 text-center">
                 <div className="text-4xl font-serif text-white mb-2">15+</div>
                 <div className="text-white/80 text-sm">Green Mark Platinum Projects</div>
@@ -354,7 +366,8 @@ export default function Services() {
                 <div className="text-4xl font-serif text-white mb-2">ISO 14001:2015</div>
                 <div className="text-white/80 text-sm">Environmental Management Certified</div>
               </div>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -362,7 +375,8 @@ export default function Services() {
       {/* CTA Section */}
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-6">
               Need Engineering Consultation?
             </h2>
@@ -374,7 +388,8 @@ export default function Services() {
                 Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

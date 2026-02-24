@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 import { ArrowRight } from "lucide-react";
 
 const PROJECTS_HERO = "https://private-us-east-1.manuscdn.com/sessionFile/iS0tuWCbowu9uVIvmwHdVa/sandbox/EcQqyD3FNxc2bvVO0zsKSi-img-5_1770087767000_na1fn_Y29uc3RydWN0aW9uLXNpdGUtcHJvZ3Jlc3M.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvaVMwdHVXQ2Jvd3U5dVZJdm13SGRWYS9zYW5kYm94L0VjUXF5RDNGTnhjMmJ2Vk8wenNLU2ktaW1nLTVfMTc3MDA4Nzc2NzAwMF9uYTFmbl9ZMjl1YzNSeWRXTjBhVzl1TFhOcGRHVXRjSEp2WjNKbGMzTS5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=v0-l3QUyVhfka-kwLZ4lvHbRt3HZJD-LRowcii8u6Y6C5FFErINiiG1VudHYKeLWqL6yEq7AitNxWiMTeEdEiKgiWTy68vyRgb8xZaZFzx50BAlpZWh09P87kAaFkx8veGP2IaMKvDurf5aJYAW4XeeD92XR6UhHGjPbYbD7DL7PeO72YnHsgUv1OgUn6vCkU6bwkFdz1m7nc1SOVzljjLHWoyKyIj5ldTuGCwapFxDcz9NtCAhYY3mB71~6To3IEdqlX9WsO9OJEPxI4naKjvRKxnipBnSIwa3FqKflJvb6rLRKEHtFXsLowN64WdHpaebDXPJHo8G4TLJNFr2koA__";
@@ -318,10 +319,10 @@ export default function Projects() {
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project, index) => (
-              <Card
-                key={index}
-                className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 p-0 h-full flex flex-col"
-              >
+              <ScrollReveal key={index} delay={(index % 9) * 0.05} fullWidth>
+                <Card
+                  className="group overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 p-0 h-full flex flex-col"
+                >
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img
                     src={project.image}
@@ -360,6 +361,7 @@ export default function Projects() {
                   </p>
                 </CardContent>
               </Card>
+              </ScrollReveal>
             ))}
           </div>
 
@@ -371,7 +373,8 @@ export default function Projects() {
         </div>
 
         {/* Full Profile Download Section */}
-        <div className="mt-16 mb-8">
+        <ScrollReveal delay={0.2}>
+          <div className="mt-16 mb-8">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
               Download Our Full Profile
@@ -433,20 +436,23 @@ export default function Projects() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* Awards Section */}
       <section className="section-padding bg-white">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
-              Awards & Recognition
-            </h2>
-            <p className="text-muted-foreground">
-              Our projects have been recognized with numerous industry awards for 
-              excellence in design, construction, and sustainability.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
+                Awards & Recognition
+              </h2>
+              <p className="text-muted-foreground">
+                Our projects have been recognized with numerous industry awards for 
+                excellence in design, construction, and sustainability.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
@@ -455,10 +461,12 @@ export default function Projects() {
               { count: "10+", label: "Construction Excellence Awards" },
               { count: "5+", label: "Best Buildable Design Awards" },
             ].map((award, index) => (
-              <div key={index} className="text-center p-6 bg-muted rounded-lg">
-                <div className="text-3xl font-serif text-primary mb-2">{award.count}</div>
-                <div className="text-sm text-muted-foreground">{award.label}</div>
-              </div>
+              <ScrollReveal key={index} delay={index * 0.1} direction="none" fullWidth>
+                <div className="text-center p-6 bg-muted rounded-lg">
+                  <div className="text-3xl font-serif text-primary mb-2">{award.count}</div>
+                  <div className="text-sm text-muted-foreground">{award.label}</div>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -467,20 +475,22 @@ export default function Projects() {
       {/* CTA Section */}
       <section className="py-20 bg-slate-900">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">
-              Have a Project in Mind?
-            </h2>
-            <p className="text-slate-400 mb-8 text-lg">
-              Let's discuss how we can bring your vision to life with our 
-              engineering expertise.
-            </p>
-            <Link href="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium">
-                Start a Conversation <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">
+                Have a Project in Mind?
+              </h2>
+              <p className="text-slate-400 mb-8 text-lg">
+                Let's discuss how we can bring your vision to life with our 
+                engineering expertise.
+              </p>
+              <Link href="/contact">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-medium">
+                  Start a Conversation <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 import { 
   Award, 
   Users, 
@@ -76,38 +77,42 @@ export default function About() {
       <section className="section-padding bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-6">
-                The Practice
-              </h2>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Alpha Consulting Engineers Pte Ltd was established in January 1995 
-                in conjunction with Alpha Engineering Consultant to assist in undertaking 
-                a whole spectrum of mechanical and electrical engineering consultancy 
-                services pertaining to building construction and other industries in 
-                Singapore and the region.
-              </p>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Together with Alpha Engineering Consultant, Alpha Consulting Engineers 
-                Pte Ltd (ACEPL) has since 1995 completed numerous projects, ranging from 
-                condominiums, teaching institutions, hospitals, hotels, office buildings, 
-                shopping malls to aircraft hangars, wafer fabrication plants etc. in 
-                Singapore, Indonesia, Myanmar, Vietnam, Thailand and China.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                ACEPL is committed to providing high quality services to our clients. 
-                No effort will be spared in producing economical, practical and reliable 
-                electrical and mechanical design, in sympathy with the building architecture 
-                and structure, to meet the client's requirements and satisfaction.
-              </p>
-            </div>
-            <div>
-              <img
-                src={TEAM_IMAGE}
-                alt="Alpha Consulting Engineers Team"
-                className="rounded-lg shadow-xl w-full"
-              />
-            </div>
+            <ScrollReveal direction="left">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-6">
+                  The Practice
+                </h2>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  Alpha Consulting Engineers Pte Ltd was established in January 1995 
+                  in conjunction with Alpha Engineering Consultant to assist in undertaking 
+                  a whole spectrum of mechanical and electrical engineering consultancy 
+                  services pertaining to building construction and other industries in 
+                  Singapore and the region.
+                </p>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  Together with Alpha Engineering Consultant, Alpha Consulting Engineers 
+                  Pte Ltd (ACEPL) has since 1995 completed numerous projects, ranging from 
+                  condominiums, teaching institutions, hospitals, hotels, office buildings, 
+                  shopping malls to aircraft hangars, wafer fabrication plants etc. in 
+                  Singapore, Indonesia, Myanmar, Vietnam, Thailand and China.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  ACEPL is committed to providing high quality services to our clients. 
+                  No effort will be spared in producing economical, practical and reliable 
+                  electrical and mechanical design, in sympathy with the building architecture 
+                  and structure, to meet the client's requirements and satisfaction.
+                </p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal direction="right" delay={0.2}>
+              <div>
+                <img
+                  src={TEAM_IMAGE}
+                  alt="Alpha Consulting Engineers Team"
+                  className="rounded-lg shadow-xl w-full"
+                />
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -115,26 +120,30 @@ export default function About() {
       {/* Our Values Section */}
       <section className="section-padding bg-muted">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
-              Our Values
-            </h2>
-            <p className="text-muted-foreground">
-              The principles that guide our work and define our commitment to excellence.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
+                Our Values
+              </h2>
+              <p className="text-muted-foreground">
+                The principles that guide our work and define our commitment to excellence.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="text-center border-none shadow-lg">
-                <CardContent className="p-8">
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                    <value.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="font-serif text-xl text-foreground mb-3">{value.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
-                </CardContent>
-              </Card>
+              <ScrollReveal key={index} delay={index * 0.15} fullWidth>
+                <Card className="text-center border-none shadow-lg">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
+                      <value.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <h3 className="font-serif text-xl text-foreground mb-3">{value.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
+                  </CardContent>
+                </Card>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -143,22 +152,26 @@ export default function About() {
       {/* Team Section */}
       <section className="section-padding bg-white">
         <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
-              Our Team
-            </h2>
-            <p className="text-muted-foreground">
-              Our present staff strength stands at 37 professionals, bringing together 
-              expertise across all aspects of mechanical and electrical engineering.
-            </p>
-          </div>
+          <ScrollReveal>
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-4">
+                Our Team
+              </h2>
+              <p className="text-muted-foreground">
+                Our present staff strength stands at 37 professionals, bringing together 
+                expertise across all aspects of mechanical and electrical engineering.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {teamStats.map((stat, index) => (
-              <div key={index} className="text-center p-6 bg-muted rounded-lg">
-                <div className="text-4xl font-serif text-primary mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
+              <ScrollReveal key={index} delay={index * 0.1} direction="none" fullWidth>
+                <div className="text-center p-6 bg-muted rounded-lg">
+                  <div className="text-4xl font-serif text-primary mb-2">{stat.value}</div>
+                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -168,7 +181,8 @@ export default function About() {
       <section className="section-padding bg-slate-900">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <ScrollReveal direction="left">
+              <div>
               <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">
                 Certifications & Accreditations
               </h2>
@@ -187,8 +201,10 @@ export default function About() {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="grid grid-cols-2 gap-6">
+              </div>
+            </ScrollReveal>
+            <ScrollReveal direction="right" delay={0.2}>
+              <div className="grid grid-cols-2 gap-6">
               <div className="bg-slate-800 rounded-lg p-8 text-center">
                 <div className="text-5xl font-serif text-primary mb-2">ISO</div>
                 <div className="text-slate-400 text-sm">9001:2015</div>
@@ -201,7 +217,8 @@ export default function About() {
                 <div className="text-3xl font-serif text-primary mb-2">BCA Registered</div>
                 <div className="text-slate-400 text-sm">M&E Consultant</div>
               </div>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -209,7 +226,8 @@ export default function About() {
       {/* CTA Section */}
       <section className="py-20 bg-muted">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
+          <ScrollReveal>
+            <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-6">
               Let's Work Together
             </h2>
@@ -222,7 +240,8 @@ export default function About() {
                 Contact Us <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
